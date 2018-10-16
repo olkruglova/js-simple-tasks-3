@@ -42,3 +42,16 @@ function lang() {
 		p.innerHTML = arr;
     }
 }
+/*
+task4: Дан чекбокс. Дан инпут. Сделайте так, что если чекбокс отмечен - инпут видимый, если не отмечен - не видимый
+*/
+let inp = document.getElementById('visInvis');
+let rad = document.querySelector('.radio');
+
+function change (){
+    if(rad.checked) {
+        inp.style.display = 'none';
+    } else {
+        inp.style.display = 'block';
+    }
+}
