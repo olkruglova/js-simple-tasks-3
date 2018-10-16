@@ -28,4 +28,17 @@ function func (){
 }
 /*
 task3: Спросите у пользователя какой язык (html, css, js, php) он знает с помощью радио кнопочек. Выведите этот язык в абзац
+Выбранные языки должны выводится в абзац ниже через запятую
 */
+let ch = document.getElementsByTagName('input');
+let p = document.querySelector('.answer');
+let arr =[];
+for(var i=0;i<ch.length;i++) {
+    ch[i].addEventListener('change', lang);
+}
+function lang() {
+    if(this.checked) {
+        arr.push(' ' + this.value);
+		p.innerHTML = arr;
+    }
+}
