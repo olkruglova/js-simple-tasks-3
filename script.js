@@ -34,7 +34,9 @@ let ch = document.getElementsByTagName('input');
 let p = document.querySelector('.answer');
 let arr =[];
 for(var i=0;i<ch.length;i++) {
+    if (ch[i].getAttribute('class') == 'chek'){
     ch[i].addEventListener('change', lang);
+    }
 }
 function lang() {
     if(this.checked) {
@@ -55,3 +57,58 @@ function change (){
         inp.style.display = 'block';
     }
 }
+/*
+task5: Даны чекбоксы. Под каждым чекбоксом размещен абзац. Сделайте так, что если чекбокс отмечен - соответствующий абзац видимый, а если не отмечен - не видимый.
+*/
+/*(function funcVis() {
+    var ik = document.getElementById('task5');
+    var iks = ik.children;
+    //console.log(iks);
+    for (var i = 0; i< iks.length; i++) {
+        iks[i].addEventListener('change', hide);
+    }
+    function hide(){
+        if (this.checked) {
+            $('.txt1').css( "display", "none" );
+        }else{
+            $('.txt1').css( "display", "block" );
+        }
+    }
+})();
+*/
+/*
+task6: Дан инпут. Даны li. В инпут пишется номер. Сделайте так, чтобы по вводу числа, li с заданным номером покрасился в красный цвет
+*/
+
+/*function color(){
+    let inputs = document.getElementById('traf');
+    inputs.addEventListener('change', color);
+    let numbers = document.querySelectorAll('.number');
+    let num = [];
+    for(var j=0;j<numbers.length;j++){
+        num.push(numbers[j].innerHTML);
+        for(var i=0;i<num.length;i++){
+            if (num[i] == inputs.value) {
+                console.log(num[i]);
+                changes()
+            }
+        }
+    }
+    function changes(){
+        for(var j=0;j<numbers.length;j++){
+        if (this==numbers[j].innerHTML){
+            numbers[j].style.color = 'red';
+        }
+    }
+}}*/
+var inputs = document.getElementById('traf');
+inputs.addEventListener('change', func1);
+var n = 0;
+function func1() {
+	n = +inputs.value;
+	var elem = document.querySelectorAll('.number');
+	elem[n-1].style.color = 'red';
+}
+/*
+task7:
+*/

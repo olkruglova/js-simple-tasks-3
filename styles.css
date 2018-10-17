@@ -4,3 +4,19 @@ div, button{
 hr {
     margin-top:30px;
 }
+.txt {
+    display: block;
+}
+ul {
+    column-gap: 20px;
+    column-width: 70px;
+    list-style: none;
+    padding:0;
+}
+li {
+    width: 75px;
+    margin:0;
+}
+#traf {
+    margin-bottom: 15px;
+}
