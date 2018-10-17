@@ -20,3 +20,7 @@ li {
 #traf {
     margin-bottom: 15px;
 }
+.col-md-4 {
+    padding:0;
+    margin:0;
+}

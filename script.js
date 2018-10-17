@@ -126,3 +126,14 @@ function manipulation(){
 		textForChange.style.cssText = 'none';
     }
 }
+/*
+task8: Дан блок с кнопкой 'закрыть блок'. По нажатию на эту кнопку блок должен исчезнуть. Кнопка размещается внутри блока и должна исчезнуть вместе с ним. Блоков может быть любое количество, каждый из них закрывает своя кнопка
+*/
+let button = document.querySelectorAll('.btn1');
+for(var i=0;i<button.length;i++){
+    button[i].addEventListener('click', dlt);
+}
+function dlt(){
+    this.parentElement.remove();
+    //this.parentNode.style.display = 'none';
+}
