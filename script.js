@@ -110,5 +110,19 @@ function func1() {
 	elem[n-1].style.color = 'red';
 }
 /*
-task7:
+task7: Дан абзац. Даны чекбоксы 'перечеркнуть', 'сделать жирным', 'сделать красным'. Если соответствующий чекбокс отмечен - заданное действие происходит с абзацем (становится красным, например). Если чекбоксу снять отметку - действие отменяется.
 */
+let textForChange = document.querySelector('.textForChange');
+let options = document.querySelectorAll('.manip');
+
+for(var i=0;i<options.length;i++){
+    options[i].addEventListener('change', manipulation);
+        }
+
+function manipulation(){
+    if (this.checked) {
+		textForChange.style.cssText = this.value;
+	} else {
+		textForChange.style.cssText = 'none';
+    }
+}
